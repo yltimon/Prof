@@ -7,10 +7,12 @@ import Dashboard from './components/Dashboard';
 import ClaimSubmission from './components/ClaimSubmission';
 import ClinicLocator from './components/ClinicLocator'
 import SignUp from './components/SignUp';
+import Chatbot from './components/Chatbot';
 
 const App = () => {
   return (
     <Router>
+      <Chatbot />
       <Routes>
         <Route path='/' element={<Hero/>} />
         <Route path='/homepage' element={<Dashboard/>} />

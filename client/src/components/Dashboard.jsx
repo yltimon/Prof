@@ -6,13 +6,15 @@ function Dashboard() {
 
     const gridItemData = [
         { icon: FaInfoCircle, text: 'Check Insurance Status', backgroundColor: 'bg-rose-200', path: '#'},
-        { icon: FaFileAlt, text: 'Submit a Claim', backgroundColor: 'bg-neutral-400', path: '#'},
+        { icon: FaFileAlt, text: 'Submit a Claim', backgroundColor: 'bg-neutral-400', path: '/claim'},
         { icon: FaSearch, text: 'Track Claim Status', backgroundColor: 'bg-red-900', path: '#', textColor: 'text-white'},
         { icon: FaUserEdit, text: 'Update Information', backgroundColor: 'bg-rose-200', path: '#'},
-        { icon: FaMapMarkerAlt, text: 'Find Nearby Clinics', backgroundColor: 'bg-neutral-400', path: '#'},
+        { icon: FaMapMarkerAlt, text: 'Find Nearby Clinics', backgroundColor: 'bg-neutral-400', path: '/locator'},
         { icon: FaRegStar, text: 'Provide Ratings for Clinics', backgroundColor: 'bg-red-900', path: '#', textColor: 'text-white'},
 
     ];
+
+    const navigate = useNavigate();
 
     const handleGridItemClick = (path) => {
         navigate(path);
