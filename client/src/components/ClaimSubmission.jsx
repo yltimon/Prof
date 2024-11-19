@@ -1,6 +1,11 @@
 import { FaClinicMedical } from "react-icons/fa";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 function ClaimSubmission() {
+
+    const navigate = useNavigate()
+    const handleClick = () => {
+        navigate('/homepage')
+    }
     return(
         <div>
             <nav className="flex justify-between bg-white border-gray-400 shadow-md p-4">
@@ -57,7 +62,7 @@ function ClaimSubmission() {
                             <label className="font-medium block mt-1 mb-2" htmlFor="docs">Upload Documents</label>
                             <input className="py-2 px-2 w-full mb-2 border" type="file" name="docs" id="docs" />
                         </div>
-                        <button className="py-2 px-2 mt-6 w-full mb-2 border bg-red-900 text-white" type="submit">Submit Claim</button>
+                        <button onClick={handleClick} className="py-2 px-2 mt-6 w-full mb-2 border bg-red-900 text-white" type="submit">Submit Claim</button>
                     </form>
                 </div>
             </main>
